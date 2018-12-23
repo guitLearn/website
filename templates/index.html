@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>
+		Welcome my website
+	</title>
+</head>
+<body>
+	<h1>Welcome my robot</h1>
+	<hr>
+	{% for post in posts %}
+		<p> {{post.title}} </p>
+		<a href='/post/{{post.slug}}'>{{post.title}}</a>
+	{% endfor %}
+	</hr>
+	<h3>time: {{now}} </h3>
+</body>
+</html>
