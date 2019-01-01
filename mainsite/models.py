@@ -14,7 +14,9 @@ def create_id():
 class Post(models.Model):
 	title = models.CharField(max_length=200)
 	slug = models.CharField(max_length=33, default=create_id(), editable=False)
+	bookmark = models.CharField(max_length=60, default="")
 	body = models.TextField()
+	embededCode = models.TextField(default="")
 	pub_date= models.DateTimeField(default=timezone.now)
 
 	class Meta:
